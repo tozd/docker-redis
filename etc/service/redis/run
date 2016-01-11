@@ -1,0 +1,6 @@
+#!/bin/bash -e
+
+chown redis:redis /data
+
+exec chpst -u redis:redis /usr/bin/redis-server 2>&1
+
