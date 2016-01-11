@@ -2,5 +2,5 @@
 
 chown redis:redis /data
 
-exec chpst -u redis:redis /usr/local/bin/redis-server 2>&1
+exec chpst -u redis:redis /usr/local/bin/redis-server --dir /data/ 2>&1
 
