@@ -1,4 +1,4 @@
-FROM tozd/runit
+FROM tozd/runit:trusty
 
 EXPOSE 6379/tcp
 
