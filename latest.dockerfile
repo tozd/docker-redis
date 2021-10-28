@@ -20,6 +20,7 @@ RUN groupadd -r redis && \
  make -C /usr/src/redis && \
  make -C /usr/src/redis install && \
  rm -r /usr/src/redis && \
- apt-get --yes --force-yes --auto-remove purge build-essential
+ apt-get --yes --force-yes --auto-remove purge build-essential && \
+ apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* ~/.cache ~/.npm
 
 COPY ./etc /etc
