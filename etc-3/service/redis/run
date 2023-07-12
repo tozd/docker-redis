@@ -3,6 +3,9 @@
 chown redis:redis /data
 
 # Redis versions before 7 do not support wildcard includes.
-cat /etc/redis/conf.d/*.conf > /var/run/redis.conf
+# We enable nullglob so that no files have to exist and cat from /dev/null
+# so that if no file exists, an empty output file is created.
+shopt -s nullglob
+cat /dev/null /etc/redis/conf.d/*.conf > /var/run/redis.conf
 
 exec chpst -u redis:redis /usr/local/bin/redis-server --dir /data/ --protected-mode no --include /var/run/redis.conf
