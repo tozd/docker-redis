@@ -28,3 +28,4 @@ RUN groupadd -r redis && \
   apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* ~/.cache ~/.npm
 
 COPY ./etc/service/redis /etc/service/redis
+COPY ./log /etc/service/redis/log
