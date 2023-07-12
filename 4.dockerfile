@@ -4,8 +4,8 @@ EXPOSE 6379/tcp
 
 VOLUME /data
 
-ARG REDIS_DOWNLOAD_URL=http://download.redis.io/releases/redis-3.2.13.tar.gz
-ARG REDIS_DOWNLOAD_SHA1=f42a5301a3960ffbccff60596d24c6b73508b103
+ARG REDIS_DOWNLOAD_URL=http://download.redis.io/releases/redis-4.0.14.tar.gz
+ARG REDIS_DOWNLOAD_SHA1=21a4e37d532ff2469943864096db36fd1b8f43bb
 
 RUN groupadd -r redis && \
   useradd -r -g redis redis && \
