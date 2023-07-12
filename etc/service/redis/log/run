@@ -1,6 +1,10 @@
 #!/bin/bash -e
 
-mkdir -p /var/log/redis
-chown nobody:nogroup /var/log/redis
+if [ "${LOG_TO_STDOUT}" != "1" ]; then
+  mkdir -p /var/log/redis
+  chown nobody:nogroup /var/log/redis
 
-exec chpst -u nobody:nogroup svlogd -tt /var/log/redis
+  exec chpst -u nobody:nogroup svlogd -tt /var/log/redis
+else
+  exec chpst -u nobody:nogroup regex2json "^\\s*(?:(?P<pid___int___optional>\\d+):(?P<role___optional>\\S) (?P<time___optional>\\d+ \\S+ \\d+:\\d+:\\d+\\.\\d+) (?P<level___optional>\\S) )?(?P<msg>.+?)\\s*$"
+fi

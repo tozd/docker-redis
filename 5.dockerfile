@@ -4,6 +4,8 @@ EXPOSE 6379/tcp
 
 VOLUME /data
 
+ENV LOG_TO_STDOUT=0
+
 ARG REDIS_DOWNLOAD_URL=http://download.redis.io/releases/redis-5.0.14.tar.gz
 ARG REDIS_DOWNLOAD_SHA1=58f2b4bfd4aded983195c21275516dac2f7e283e
 
