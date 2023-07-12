@@ -26,5 +26,5 @@ echo "Sleeping"
 sleep 5
 
 echo "Testing"
-echo -e '*1\r\n$4\r\nPING\r\n' | nc -w1 docker 6379
+echo -e '*1\r\n$4\r\nPING\r\n' | nc -w1 docker 6379 | grep PONG
 echo "Success"
