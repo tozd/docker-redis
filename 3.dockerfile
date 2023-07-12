@@ -2,6 +2,8 @@ FROM registry.gitlab.com/tozd/docker/dinit:ubuntu-jammy
 
 EXPOSE 6379/tcp
 
+VOLUME /var/log/redis
+VOLUME /etc/redis/conf.d
 VOLUME /data
 
 ENV LOG_TO_STDOUT=0
