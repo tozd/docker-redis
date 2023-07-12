@@ -23,4 +23,4 @@ RUN groupadd -r redis && \
   apt-get purge --yes --force-yes --auto-remove wget ca-certificates build-essential && \
   apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* ~/.cache ~/.npm
 
-COPY ./etc /etc
+COPY ./etc/service/redis /etc/service/redis
