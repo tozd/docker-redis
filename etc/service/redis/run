@@ -2,4 +2,4 @@
 
 chown redis:redis /data
 
-exec chpst -u redis:redis /usr/local/bin/redis-server --dir /data/
+exec chpst -u redis:redis /usr/local/bin/redis-server --dir /data/ --protected-mode no
