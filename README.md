@@ -42,6 +42,8 @@ Different Docker tags provide different Redis versions.
 You should make sure you mount data volume (`/data`) when you configure Redis with persistence
 so that you do not lose data when you are recreating a container.
 
+When `LOG_TO_STDOUT` is set to `1`, Docker image logs output to stdout and stderr. All stdout output is JSON.
+
 ## GitHub mirror
 
 There is also a [read-only GitHub mirror available](https://github.com/tozd/docker-redis),
