@@ -16,8 +16,9 @@ Available as:
 - `3`: Redis 3.2.13
 - `4`: Redis 4.0.14
 - `5`: Redis 5.0.14
-- `6`: Redis 6.2.13
-- `7`: Redis 7.0.12
+- `6`: Redis 6.2.18
+- `7`: Redis 7.4.4
+- `8`: Redis 8.0.2
 
 ## Volumes
 
