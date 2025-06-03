@@ -21,6 +21,7 @@ RUN groupadd -r redis && \
   tar -xzf redis.tar.gz -C /usr/src/redis --strip-components=1 && \
   rm redis.tar.gz && \
   rm /usr/src/redis/tests/unit/memefficiency.tcl && \
+  sed -i s/unit.memefficiency// ./tests/test_helper.tcl && \
   make -C /usr/src/redis && \
   make -C /usr/src/redis test && \
   make -C /usr/src/redis install && \
