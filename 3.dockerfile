@@ -1,4 +1,4 @@
-FROM registry.gitlab.com/tozd/docker/dinit:ubuntu-jammy
+FROM registry.gitlab.com/tozd/docker/dinit:ubuntu-noble
 
 EXPOSE 6379/tcp
 
